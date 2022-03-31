@@ -1,0 +1,11 @@
+.set-2() {
+    one: blue;
+    two: green;
+    three: red;
+}
+.set-2 {
+    // Call mixin and iterate each rule
+    each(.set-2(), .(@v, @k, @i) {
+      @{k}-@{i}: @v;
+    });
+}
